@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Laporan Analisis Prediksi Kelulusan - SMKN 1 Sandai</title>
+    <style>
+        /* Global Styles */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        
+        /* Header Styles */
+        .header { 
+            text-align: center; 
+            border-bottom: 3px solid #2c5aa0; 
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3a8a 100%);
+            color: white;
+            padding: 30px;
+            margin: -30px -30px 30px -30px;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .school-name {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .report-title {
+            font-size: 22px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .report-date {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+        
+        /* Statistics Cards */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            border-left: 4px solid #2c5aa0;
+        }
+        
+        .stat-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2c5aa0;
+            margin: 10px 0;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Table Styles */
+        .table-section {
+            margin: 30px 0;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c5aa0;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .prediction-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .prediction-table th {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3a8a 100%);
+            color: white;
+            padding: 12px 8px;
+            text-align: center;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 11px;
+        }
+        
+        .prediction-table td {
+            padding: 10px 8px;
+            border-bottom: 1px solid #e9ecef;
+            text-align: center;
+        }
+        
+        .prediction-table tr:hover {
+            background-color: #f8f9fa;
+        }
+        
+        /* Status Badges */
+        .lulus {
+            background-color: #d4edda;
+            color: #155724;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+        }
+        
+        .tidak-lulus {
+            background-color: #f8d7da;
+            color: #721c24;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+        }
+        
+        /* Score Colors */
+        .score-excellent { color: #28a745; font-weight: bold; }
+        .score-good { color: #20c997; font-weight: bold; }
+        .score-average { color: #ffc107; font-weight: bold; }
+        .score-poor { color: #dc3545; font-weight: bold; }
+        
+        /* Summary Section */
+        .summary-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            border-left: 4px solid #2c5aa0;
+        }
+        
+        .summary-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2c5aa0;
+            margin-bottom: 15px;
+        }
+        
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        
+        .summary-item {
+            text-align: center;
+        }
+        
+        .summary-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c5aa0;
+        }
+        
+        .summary-label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+            color: #666;
+            font-size: 12px;
+        }
+        
+        /* Print Styles */
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; margin: 0; padding: 10px; }
+            .header { margin: 0; border-radius: 0; }
+            .stat-card { box-shadow: none; border: 1px solid #ddd; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="school-name">SMKN 1 SANDAI</div>
+            <div class="report-title">LAPORAN ANALISIS PREDIKSI KELULUSAN SISWA</div>
+            <div class="report-date">Dicetak pada: {{tanggal}} | Sistem Prediksi Kelulusan</div>
+        </div>
+        
+        <!-- Statistics Overview -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-label">Total Siswa</div>
+                <div class="stat-value">{{ total_siswa }}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Prediksi Lulus</div>
+                <div class="stat-value" style="color: #28a745;">{{ prediksi_lulus }}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Prediksi Tidak Lulus</div>
+                <div class="stat-value" style="color: #dc3545;">{{ prediksi_tidak_lulus }}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Persentase Kelulusan</div>
+                <div class="stat-value" style="color: #2c5aa0;">{{ persentase_lulus }}%</div>
+            </div>
+        </div>
+        
+        <!-- Data Prediksi Section -->
+        <div class="table-section">
+            <div class="section-title">📊 DETAIL PREDIKSI KELULUSAN SISWA</div>
+            <table class="prediction-table">
+                <thead>
+                    <tr>
+                        <th>NIS</th>
+                        <th>Nama Siswa</th>
+                        <th>Kelas</th>
+                        <th>Matematika</th>
+                        <th>B. Indonesia</th>
+                        <th>B. Inggris</th>
+                        <th>Kejuruan</th>
+                        <th>Kehadiran</th>
+                        <th>Sikap</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for siswa in data_siswa %}
+                    <tr>
+                        <td><strong>{{ siswa.nis }}</strong></td>
+                        <td style="text-align: left;">{{ siswa.nama }}</td>
+                        <td>{{ siswa.kelas }}</td>
+                        <td class="score-{{ 'excellent' if siswa.nilai_matematika >= 85 else 'good' if siswa.nilai_matematika >= 75 else 'average' if siswa.nilai_matematika >= 65 else 'poor' }}">
+                            {{ siswa.nilai_matematika }}
+                        </td>
+                        <td class="score-{{ 'excellent' if siswa.nilai_bahasa_indonesia >= 85 else 'good' if siswa.nilai_bahasa_indonesia >= 75 else 'average' if siswa.nilai_bahasa_indonesia >= 65 else 'poor' }}">
+                            {{ siswa.nilai_bahasa_indonesia }}
+                        </td>
+                        <td class="score-{{ 'excellent' if siswa.nilai_bahasa_inggris >= 85 else 'good' if siswa.nilai_bahasa_inggris >= 75 else 'average' if siswa.nilai_bahasa_inggris >= 65 else 'poor' }}">
+                            {{ siswa.nilai_bahasa_inggris }}
+                        </td>
+                        <td class="score-{{ 'excellent' if siswa.nilai_kejuruan >= 85 else 'good' if siswa.nilai_kejuruan >= 75 else 'average' if siswa.nilai_kejuruan >= 65 else 'poor' }}">
+                            {{ siswa.nilai_kejuruan }}
+                        </td>
+                        <td class="score-{{ 'excellent' if siswa.kehadiran >= 95 else 'good' if siswa.kehadiran >= 90 else 'average' if siswa.kehadiran >= 85 else 'poor' }}">
+                            {{ siswa.kehadiran }}%
+                        </td>
+                        <td class="score-{{ 'excellent' if siswa.sikap >= 90 else 'good' if siswa.sikap >= 80 else 'average' if siswa.sikap >= 70 else 'poor' }}">
+                            {{ siswa.sikap }}
+                        </td>
+                        <td>
+                            <span class="{{ 'lulus' if siswa.prediksi == 1 else 'tidak-lulus' }}">
+                                {{ 'LULUS' if siswa.prediksi == 1 else 'TIDAK LULUS' }}
+                            </span>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Summary Section -->
+        <div class="summary-section">
+            <div class="summary-title">📈 RINGKASAN ANALISIS</div>
+            <div class="summary-stats">
+                <div class="summary-item">
+                    <div class="summary-value">{{ total_siswa }}</div>
+                    <div class="summary-label">Total Siswa</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value" style="color: #28a745;">{{ prediksi_lulus }}</div>
+                    <div class="summary-label">Siswa Lulus</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value" style="color: #dc3545;">{{ prediksi_tidak_lulus }}</div>
+                    <div class="summary-label">Siswa Tidak Lulus</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value" style="color: #2c5aa0;">{{ persentase_lulus }}%</div>
+                    <div class="summary-label">Tingkat Kelulusan</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>Laporan ini dihasilkan secara otomatis oleh Sistem Prediksi Kelulusan SMKN 1 Sandai</p>
+            <p>© 2024 SMKN 1 Sandai. Semua hak cipta dilindungi.</p>
+        </div>
+    </div>
+</body>
+</html>

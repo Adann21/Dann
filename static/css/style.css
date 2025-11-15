@@ -1,0 +1,52 @@
+/* Custom CSS untuk SMKN 1 Sandai */
+
+/* Hide Streamlit default elements */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+/* Main background */
+.main {
+    background-color: #000000;
+}
+
+/* Sidebar */
+.css-1d391kg {
+    background-color: #1f77b4;
+}
+
+/* Headers */
+h1, h2, h3 {
+    color: #1f77b4;
+}
+
+/* Buttons */
+.stButton > button {
+    background-color: #1f77b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.stButton > button:hover {
+    background-color: #1668a3;
+}
+
+/* Metrics */
+.css-1xarl3l {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Hide the hamburger menu */
+.css-1rs6os {
+    visibility: hidden;
+}
+
+/* Hide the streamlit branding */
+.css-1v0mbdj {
+    visibility: hidden;
+}

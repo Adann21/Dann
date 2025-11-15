@@ -1,0 +1,88 @@
+📋 INFORMASI LOGIN SISTEM PREDIKSI KELULUSAN
+SMKN 1 SANDAI
+============================================
+
+🔐 ADMINISTRATOR (Full Access)
+Username: admin
+Password: admin123
+Nama: Ahmad Fauzi, S.Kom
+
+👑 KEPALA SEKOLAH (Strategic View)  
+Username: kepsek
+Password: kepsek123
+Nama: Dr. Surya Adi Wijaya, M.Pd
+
+👨‍🏫 GURU MATA PELAJARAN (Teaching Focus)
+
+• Matematika:
+  Username: siti_math
+  Password: guru123
+  Nama: Siti Aisyah, S.Pd
+
+• Bahasa Indonesia:
+  Username: budi_bindo  
+  Password: guru123
+  Nama: Budi Santoso, S.Pd
+
+• Bahasa Inggris:
+  Username: dewi_bing
+  Password: guru123
+  Nama: Dewi Anggraini, S.Pd
+
+• Teknik Komputer Jaringan (TKJ):
+  Username: riko_tkj
+  Password: guru123
+  Nama: Riko Pratama, S.T
+
+• Multimedia (MM):
+  Username: maya_mm  
+  Password: guru123
+  Nama: Maya Sari, S.Kom
+
+• Rekayasa Perangkat Lunak (RPL):
+  Username: hendra_rpl
+  Password: guru123
+  Nama: Hendra Setiawan, S.Kom
+
+🧠 GURU BIMBINGAN KONSELING
+Username: linda_bk
+Password: bk123  
+Nama: Linda Wati, S.Psi
+
+👥 WALI KELAS (Class Management)
+
+• Wali XII TKJ 1:
+  Username: fajar_tkj1
+  Password: wali123
+  Nama: Fajar Nugroho, S.Pd
+
+• Wali XII TKJ 2:
+  Username: intan_tkj2  
+  Password: wali123
+  Nama: Intan Permata, S.Pd
+
+• Wali XII MM 1:
+  Username: agus_mm1
+  Password: wali123
+  Nama: Agus Supriyadi, S.Pd
+
+• Wali XII MM 2:
+  Username: nina_mm2
+  Password: wali123  
+  Nama: Nina Marlina, S.Pd
+
+• Wali XII RPL 1:
+  Username: dodi_rpl1
+  Password: wali123
+  Nama: Dodi Kurniawan, S.Kom
+
+• Wali XII RPL 2:
+  Username: sari_rpl2
+  Password: wali123
+  Nama: Sari Indah, S.Kom
+
+============================================
+⚠️ Catatan:
+- Setiap role memiliki dashboard dan fitur berbeda
+- Password bisa diubah oleh admin melalui menu Manage Users
+- Data sample sudah tersedia untuk testing

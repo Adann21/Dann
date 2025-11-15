@@ -1,0 +1,31 @@
+app:
+  name: "Sistem Prediksi Kelulusan SMKN 1 Sandai"
+  version: "2.0.0"
+  debug: true
+
+database:
+  type: "postgresql"
+  host: "localhost"
+  port: 5432
+  name: "prediksi_kelulusan"    # Ganti dengan nama database yang ingin digunakan
+  user: "postgres"              # Ganti dengan username PostgreSQL Anda
+  password: "232102582"                  # Kosongkan, akan diisi dari .env
+  file_path: "data/users.json"  # Untuk fallback JSON
+
+model:
+  algorithm: "PSO_RandomForest"
+  features:
+    - "nilai_matematika"
+    - "nilai_bahasa_indonesia"
+    - "nilai_bahasa_inggris"
+    - "nilai_kejuruan"
+    - "kehadiran"
+    - "sikap"
+  target: "kelulusan"
+
+roles:
+  admin: ["read", "write", "delete", "manage_users"]
+  kepala_sekolah: ["read", "export"]
+  wali_kelas: ["read", "write"]
+  guru_bk: ["read", "write"]
+  guru_mapel: ["read"]

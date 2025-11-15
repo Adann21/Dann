@@ -1,0 +1,43 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "password": "admin321",
+      "role": "admin",
+      "full_name": "Administrator",
+      "created_at": "2025-10-08T04:41:19.894408",
+      "updated_at": "2025-10-08T05:30:33.609888",
+      "updated_by": "admin"
+    },
+    {
+      "username": "WaliKelas",
+      "password": "WaliKelas321",
+      "role": "wali_kelas",
+      "full_name": "WaliKelas",
+      "created_at": "2025-10-08T08:20:53.159747",
+      "created_by": "admin",
+      "kelas": "XII TKJ 2"
+    },
+    {
+      "username": "GuruMapel",
+      "password": "GuruMapel321",
+      "role": "guru_mapel",
+      "full_name": "GuruMapel",
+      "created_at": "2025-10-08T08:21:33.681153",
+      "created_by": "admin",
+      "updated_at": "2025-10-08T08:22:12.822132",
+      "updated_by": "admin",
+      "mata_pelajaran": "BI"
+    },
+    {
+      "username": "GuruBk",
+      "password": "GuruBk321",
+      "role": "guru_bk",
+      "full_name": "GuruBk",
+      "created_at": "2025-10-08T08:22:53.112704",
+      "created_by": "admin"
+    }
+  ],
+  "students": [],
+  "predictions": []
+}

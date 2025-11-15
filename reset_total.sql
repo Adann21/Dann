@@ -1,0 +1,6 @@
+DROP DATABASE IF EXISTS smkn1_sandai;
+DROP DATABASE IF EXISTS prediksi_kelulusan;
+DROP DATABASE IF EXISTS sekolah_db;
+CREATE DATABASE database_smkn1;
+CREATE USER admin_smkn1 WITH PASSWORD 'smkn1123';
+GRANT ALL PRIVILEGES ON DATABASE database_smkn1 TO admin_smkn1;

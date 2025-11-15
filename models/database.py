@@ -1,4 +1,4 @@
-import psycopg2
+
 import psycopg2.extras
 from utils.config import app_config
 import streamlit as st

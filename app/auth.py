@@ -95,16 +95,10 @@ def logout():
         st.rerun()
 
 def check_authentication():
-    """
-    Fungsi untuk mengecek status autentikasi user
-    Jika belum login, tampilkan halaman login dan stop eksekusi
-    """
-    # Cek flag logged_in di session state
-    if not st.session_state.get("logged_in"):
-        # Tampilkan halaman login
-        login()
-        # Stop eksekusi code selanjutnya
-        st.stop()
+    # COMMENT SEMUA KODE DI SINI
+    st.session_state['user'] = {"username": "guest", "full_name": "Guest", "role": "guest"}
+    st.session_state['role'] = "guest"
+    return True
 
 def get_current_user():
     # Return default user jika tidak ada

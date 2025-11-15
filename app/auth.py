@@ -107,17 +107,9 @@ def check_authentication():
         st.stop()
 
 def get_current_user():
-    """
-    Fungsi untuk mendapatkan data user yang sedang login
-    Returns:
-        dict: Data user dari session state
-    """
-    return st.session_state.get("user")
+    # Return default user jika tidak ada
+    return st.session_state.get('user', {'full_name': 'Guest', 'jabatan': 'User'})
 
 def get_current_role():
-    """
-    Fungsi untuk mendapatkan role user yang sedang login
-    Returns:
-        str: Role user dari session state
-    """
-    return st.session_state.get("role")
+    # Return default role jika tidak ada  
+    return st.session_state.get('role', 'guest')

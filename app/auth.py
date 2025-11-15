@@ -61,7 +61,7 @@ def login():
                 return
                 
             # Ambil data user dari database
-            user_data = db.get_user(username_input)
+            #user_data = db.get_user(username_input)
             
             # Cek apakah user exist dan password match
             if user_data and user_data.get("password") == password_input:

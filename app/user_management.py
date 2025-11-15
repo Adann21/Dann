@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from datetime import datetime
 from app.auth import get_current_user, get_current_role
-from models.database import db
+#from models.database import db
 
 def show_user_management():
     """
